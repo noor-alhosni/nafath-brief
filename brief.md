@@ -13,11 +13,14 @@ Resource: Retrieval-Augmented Generation – https://cloud.google.com/use-cases/
 App Transport Security (ATS) enforces security requirements for network connections made by apps using standard URL loading. It generally requires HTTPS instead of unencrypted HTTP. If an app attempts to access an HTTP endpoint that violates ATS requirements, the connection is normally blocked unless an applicable exception is configured. HTTPS uses TLS to protect data in transit and authenticate the server. Keeping ATS protections enabled helps safeguard citizens' information when they use the government app.
 Resource: Preventing Insecure Network Connections – https://developer.apple.com/documentation/security/preventing-insecure-network-connections
 ## Networking
-
+IPv4 uses 32-bit addresses, while IPv6 uses 128-bit addresses, providing a much larger address space. This matters as more phones, computers, and other devices connect to online services. IPv6 helps support the continued growth of Internet connectivity. The government application should be tested on networks using IPv4, IPv6, or both, because citizens may use different providers and network configurations. IPv6 alone does not guarantee better performance or security; correct network configuration remains essential.
+Resource: Internet Protocol, Version 6 (IPv6) Specification – https://www.rfc-editor.org/rfc/rfc8200.html
 ## Cybersecurity
-
+Prompt injection is an attack that uses malicious instructions to manipulate an AI system. Direct prompt injection happens when a user enters instructions such as “ignore previous instructions.” Indirect prompt injection happens when malicious instructions are hidden in external content, such as a document retrieved by the assistant. Two ways to reduce the risk are to limit the AI's permissions and separate untrusted content from trusted instructions. Regular security testing can help identify weaknesses.
+Resource: LLM Prompt Injection Prevention Cheat Sheet – https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
 ## Data
-
+Anonymization removes identifying information so individuals cannot reasonably be identified, while pseudonymization replaces identifiers with codes but may allow re-identification using additional information. Under the GDPR, effectively anonymized data falls outside its scope, but pseudonymized data generally remains personal data. For government chat logs, teams should minimize personal details, restrict access, and assess re-identification risks before sharing stored data.
+Resource: General Data Protection Regulation (GDPR), Recital 26 and Article 4(5) – https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ## Misconception in My Track
 
 ## Open Question
